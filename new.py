@@ -11,7 +11,7 @@ repository_dir = "C:/Users/Administrator/Downloads/link-shortener-main"
 
 # Specify the year and month for which you want to create commits
 year = 2023
-month = 10
+month = 7
 
 # Specify the number of commits per day
 commits_per_day = 3  # Adjust as needed
