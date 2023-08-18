@@ -7,11 +7,11 @@ github_username = "YourUsername"
 github_email = "youremail@example.com"
 
 # Replace with the directory of your Git repository
-repository_dir = "C:/Users/Administrator/Downloads/link-shortener-main"
+repository_dir = "/path/to/your/repository"
 
 # Specify the year and month for which you want to create commits
 year = 2023
-month = 8
+month = 10
 
 # Specify the number of commits per day
 commits_per_day = 3  # Adjust as needed
@@ -28,17 +28,19 @@ while current_date <= last_day:
         dummy_content = f"Commit {i + 1} on {current_date.strftime('%Y-%m-%d %H:%M:%S')}"
         dummy_file = os.path.join(repository_dir, f"commit_{current_date.strftime('%Y%m%d%H%M%S')}.txt")
 
-        # Create and commit the dummy file
+        # Create and commit the dummy file with the desired date and time
         with open(dummy_file, "w") as file:
             file.write(dummy_content)
 
-        subprocess.call(["git", "add", "."])
-        subprocess.call(["git", "commit", "--date", current_date.strftime('%Y-%m-%d %H:%M:%S'), "-m", f"Commit on {current_date.strftime('%Y-%m-%d')}"])
-        subprocess.call(["git", "push", "origin", "main"])
+        # Set the commit date and time explicitly
+        commit_date = current_date.strftime('%Y-%m-%d %H:%M:%S')
+        subprocess.call(["git", "add", dummy_file])
+        subprocess.call(["git", "commit", "--date", commit_date, "-m", f"Commit on {current_date.strftime('%Y-%m-%d')}"])
+
     # Move to the next day
     current_date += timedelta(days=1)
 
 # Push the commits to your GitHub repository
+subprocess.call(["git", "push", "origin", "main"])
 
-
-print("Commits pushed to GitHub.")
+print("Commits pushed to GitHub with custom commit times.")
