@@ -7,7 +7,7 @@ github_username = "YourUsername"
 github_email = "youremail@example.com"
 
 # Replace with the directory of your Git repository
-repository_dir = "/path/to/your/repository"
+repository_dir = "C:/Users/Administrator/Downloads/link-shortener-main"
 
 # Specify the year and month for which you want to create commits
 year = 2023
