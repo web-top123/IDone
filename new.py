@@ -41,6 +41,6 @@ while current_date <= last_day:
     current_date += timedelta(days=1)
 
 # Push the commits to your GitHub repository
-subprocess.call(["git", "push", "origin", "main"])
+
 
 print("Commits pushed to GitHub with custom commit times.")
