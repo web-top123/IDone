@@ -34,7 +34,7 @@ while current_date <= last_day:
 
         # Set the commit date and time explicitly
         commit_date = current_date.strftime('%Y-%m-%d %H:%M:%S')
-        subprocess.call(["git", "add", dummy_file])
+        subprocess.call(["git", "add", "."])
         subprocess.call(["git", "commit", "--date", commit_date, "-m", f"Commit on {current_date.strftime('%Y-%m-%d')}"])
         subprocess.call(["git", "push", "origin", "main"])
     # Move to the next day
