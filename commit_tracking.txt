@@ -8,3 +8,10 @@ Contributions in year 2020: !COUNT!
 Contributions in year 2021: !COUNT! 
 Contributions in year 2022: !COUNT! 
 Contributions in year 2023: !COUNT! 
+repository_dir = "C:/Users/Administrator/Downloads/link-shortener-main"
+
+github_username = "web-top123"
+github_email = "webtopc2021@gmail.com"
+
+# Replace with the directory of your Git repository
+repository_dir = "C:/Users/Administrator/Downloads/link-shortener-main"
